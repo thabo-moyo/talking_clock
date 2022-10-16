@@ -49,7 +49,7 @@ Example output: Four o'clock
    
    Returns current time in human friendly format
    ```sh
-   GET: /api/time
+   GET: /api/time/human-friendly
    ```
    Example output:
    
@@ -57,5 +57,5 @@ Example output: Four o'clock
    Returns given time in human friendly format
 
    ```sh
-   GET: /api/time/{slug}
+   GET: /api/time/human-friendly/{slug}
    ```
