@@ -28,26 +28,34 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Objective 1: 
-    ```sh
-   ./main 
+#### Objective 1: 
+   ```sh
+   ./main 16:00
    ```
+   
 Example output: Three o'clock
 
-Objective 2: 
-    ```sh
+#### Objective 2: 
+
+   ```sh
    ./main 16:00
    ```
 Example output: Four o'clock
 
-Objective 3: 
+#### Objective 3: 
    A REST server will automatically start on your localhost.
    
    Accepted routes:
-    ```sh
+   
+   Returns current time in human friendly format
+   ```sh
    GET: /api/time
    ```
+   Example output:
    
-      ```sh
+   
+   Returns given time in human friendly format
+
+   ```sh
    GET: /api/time/{slug}
    ```
