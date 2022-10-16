@@ -10,12 +10,9 @@ import (
 func GetCurrentTime() string {
 	return getHumanFriendlyTime(time.Now())
 }
-func GetTimeByString(parse string) string {
+func GetTimeByString(parse string) (string, error) {
 	value, err := parseTimeString(parse)
-	if err != nil {
-		return "Incorrect time format."
-	}
-	return value
+	return value, err
 }
 
 func parseTimeString(timeString ...string) (string, error) {
@@ -36,7 +33,7 @@ func getHumanFriendlyTime(timeInput time.Time) string {
 
 	switch minute {
 	case 00:
-		timeString = fmt.Sprint(num2words.Convert(hour), " o'clock")
+		timeString = fmt.Sprint(strings.Title(num2words.Convert(hour)), " o'clock")
 	case 15:
 		timeString = fmt.Sprint("Quarter past ", num2words.Convert(hour))
 	case 30:
@@ -55,7 +52,7 @@ func getHumanFriendlyTime(timeInput time.Time) string {
 		}
 
 		timeString = fmt.Sprint(
-			strings.Replace(strings.Title(num2words.Convert(minute)), "-", " ", 1),
+			strings.Title(num2words.Convert(minute)),
 			meridian,
 			num2words.Convert(hour),
 		)

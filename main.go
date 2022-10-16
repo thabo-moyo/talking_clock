@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/talking_clock/cmd"
 	"github.com/talking_clock/pkg/utils"
-	"log"
 	"os"
 )
 
@@ -12,15 +12,16 @@ func main() {
 	timeInput := os.Args[1:]
 
 	//Check if terminal argument is empty
-	if len(timeInput) < 0 {
+	if len(os.Args) < 2 {
 		fmt.Println(utils.GetCurrentTime())
 	} else {
-		if len(timeInput[0]) > 0 {
-			fmt.Println(utils.GetTimeByString(timeInput[0]))
-		} else {
-			log.Fatal("Error: Missing time argument.")
+		byString, err := utils.GetTimeByString(timeInput[0])
+		if err != nil {
+			fmt.Println("Incorrect time format")
 		}
+
+		fmt.Println(byString)
 	}
 
-	/*	cmd.StartServer()*/
+	cmd.StartServer()
 }
