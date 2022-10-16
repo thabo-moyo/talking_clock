@@ -24,12 +24,12 @@ func parseTimeString(timeString ...string) (string, error) {
 // Convert given time to human friendly text.
 func getHumanFriendlyTime(timeInput time.Time) string {
 	hour := convertTo12Hour(timeInput.Hour())
+	minute := timeInput.Minute()
+	timeString := ""
+
 	if hour == 0 {
 		hour = 12
 	}
-
-	minute := timeInput.Minute()
-	var timeString = ""
 
 	switch minute {
 	case 00:

@@ -22,6 +22,6 @@ func main() {
 
 		fmt.Println(byString)
 	}
-
+	//Starting server for rest service
 	cmd.StartServer()
 }
