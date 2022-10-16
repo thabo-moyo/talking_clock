@@ -54,7 +54,7 @@ Example output: Four o'clock
    Example output:
    
    
-   Returns given time in human friendly format
+   Returns given time in human friendly format. Replace ```{slug}``` with time. E.g., ```15:00```
 
    ```sh
    GET: /api/time/human-friendly/{slug}
