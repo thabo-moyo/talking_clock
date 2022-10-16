@@ -46,7 +46,12 @@ Converts a given time to human friendly text
 Example output: Four o'clock
 
 #### Objective 3: 
-   A REST server will automatically start on your localhost using port 8080.
+   A REST server will start on localhost using port 8080.
+   
+   Run the command below to start server.
+   ```sh
+   ./main
+   ```
    
    Example URL
    ```localhost:8080/api/time/human-friendly```
