@@ -3,7 +3,7 @@
 
 To run the project, you will need GoLang installed on your machine.
 
-Go can be installed here: <p align="right">(<a href="https://go.dev/doc/install">Install go</a>)</p>
+Go can be installed here: <p><a href="https://go.dev/doc/install">Install go link</a></p>
 
 
 ### Installation
