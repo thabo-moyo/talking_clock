@@ -56,12 +56,10 @@ Example output: Four o'clock
    
    Accepted routes:
    
-   Returns current time in human friendly format
+   Returns current time in human friendly text.
    ```sh
    GET: /api/time/human-friendly
    ```
-   Example output:
-   
    
    Returns given time in human friendly format. Replace ```{slug}``` with time. E.g., ```15:00```
 
