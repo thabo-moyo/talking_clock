@@ -8,7 +8,7 @@ import (
 )
 
 func GetCurrentTime() string {
-	return getHumanFriendlyTime(time.Now())
+	return GetHumanFriendlyTime(time.Now())
 }
 func GetTimeByString(parse string) (string, error) {
 	value, err := parseTimeString(parse)
@@ -18,11 +18,11 @@ func GetTimeByString(parse string) (string, error) {
 func parseTimeString(timeString ...string) (string, error) {
 	parse, err := time.Parse("15:04", timeString[0])
 
-	return getHumanFriendlyTime(parse), err
+	return GetHumanFriendlyTime(parse), err
 }
 
 // Convert given time to human friendly text.
-func getHumanFriendlyTime(timeInput time.Time) string {
+func GetHumanFriendlyTime(timeInput time.Time) string {
 	hour := convertTo12Hour(timeInput.Hour())
 	minute := timeInput.Minute()
 	timeString := ""
